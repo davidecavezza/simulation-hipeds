@@ -1,0 +1,74 @@
+#VRML V2.0 utf8
+EXTERNPROTO StraightTrackPiece [
+  exposedField SFVec3f trackScale
+  exposedField SFRotation trackRotation
+  exposedField SFVec3f trackTranslation
+  exposedField SFFloat trackTransparency
+]
+"proto_straight.wrl#StraightTrackPiece" 
+
+EXTERNPROTO CurvedTrackPiece [
+  exposedField SFVec3f trackScale
+  exposedField SFRotation trackRotation
+  exposedField SFVec3f trackTranslation
+  exposedField SFFloat trackTransparency
+]
+"proto_curve.wrl#CurvedTrackPiece" 
+
+
+
+Viewpoint {
+  description "Overall_View"
+  position -5 5 20
+}
+
+EXTERNPROTO ChicaneLine [
+    exposedField SFVec3f cTranslation 
+    exposedField SFVec3f cScale
+    exposedField SFRotation cRotation
+    exposedField SFColor cColor
+]
+"chicane_line.wrl#ChicaneLine" 
+
+EXTERNPROTO ChicaneTrack [
+    exposedField SFVec3f cTranslation 
+    exposedField SFVec3f cScale
+    exposedField SFRotation cRotation
+    exposedField SFColor cColor
+]
+"chicane_track.wrl#ChicaneTrack" 
+
+#DEF ChicaneP ChicaneTrack {
+#    cTranslation 0 0 0
+#}
+
+#DEF ChicaneL ChicaneLine {
+#    cTranslation  -1 0.0208 0 #shift y axis by 0.25 inches
+#    cRotation 0 0 0 0 
+#    cColor 0.1 0.1 0.1
+#}
+
+EXTERNPROTO ChicaneTrackPiece [
+    exposedField SFVec3f trackTranslation
+    exposedField SFRotation trackRotation 
+    exposedField SFVec3f trackScale 
+    exposedField SFFloat trackTransparency
+]
+"proto_chicane.wrl#ChicaneTrackPiece" 
+
+DEF ChicaneT ChicaneTrackPiece {
+    trackTranslation 0 0 4
+    trackTransparency 0.6
+   # trackTranslation  1.2708 1 2 # 0.2708 is the offset for chicane
+}
+
+DEF StraightTrackPiece_0 StraightTrackPiece {
+  trackTranslation 0 0 0
+  trackTransparency 0.8
+}
+
+DEF Curved CurvedTrackPiece {
+    trackTranslation -2 0 -2
+    trackTransparency 0.8
+}
+

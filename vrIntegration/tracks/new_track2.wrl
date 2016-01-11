@@ -1,0 +1,95 @@
+#VRML V2.0 utf8
+
+EXTERNPROTO StraightTrackPiece [
+  exposedField SFFloat trackTransparency
+  exposedField SFVec3f trackScale
+  exposedField SFRotation trackRotation
+  exposedField SFVec3f trackTranslation
+]
+"H:/GroupProjectRepo/simulation-hipeds/vrIntegration/proto_straight.wrl#StraightTrackPiece" 
+
+EXTERNPROTO CurvedTrackPiece [
+  exposedField SFFloat trackTransparency
+  exposedField SFVec3f trackScale
+  exposedField SFRotation trackRotation
+  exposedField SFVec3f trackTranslation
+]
+"H:/GroupProjectRepo/simulation-hipeds/vrIntegration/proto_curve.wrl#CurvedTrackPiece" 
+
+EXTERNPROTO ChicaneTrackPiece [
+  exposedField SFFloat trackTransparency
+  exposedField SFVec3f trackScale
+  exposedField SFRotation trackRotation
+  exposedField SFVec3f trackTranslation
+]
+"H:/GroupProjectRepo/simulation-hipeds/vrIntegration/proto_chicane.wrl#ChicaneTrackPiece" 
+
+Background {
+  skyColor [
+    0.76238 0.8 0.1427,
+    0.277798 0.219779 0.7,
+    0.222549 0.390234 0.7,
+    0.60094 0.662637 0.69 
+  ]
+  skyAngle [0.1, 1.2, 1.57]
+  groundColor [
+    0 0.8 0,
+    0.174249 0.82 0.187362,
+    0.467223 0.82 0.445801,
+    0.621997 0.67 0.600279 
+  ]
+  groundAngle [0.9, 1.5, 1.57]
+}
+DEF Overall_View Viewpoint {
+  position -5 5 20
+}
+DEF StraightTrackPiece_0 StraightTrackPiece {
+  trackRotation 0 1 0 0
+  trackTranslation 0 0 -2
+}
+DEF StraightTrackPiece_1 StraightTrackPiece {
+  trackRotation 0 1 0 0
+  trackTranslation 0 0 -6
+}
+DEF CurvedTrackPiece_2 CurvedTrackPiece {
+  trackRotation 0 1 0 0
+  trackTranslation -2 0 -8
+}
+DEF CurvedTrackPiece_3 CurvedTrackPiece {
+  trackRotation 0 1 0 1.5708
+  trackTranslation -2 0 -8
+}
+DEF CurvedTrackPiece_4 CurvedTrackPiece {
+  trackRotation 0 1 0 4.71239
+  trackTranslation -6 0 -8
+}
+DEF CurvedTrackPiece_5 CurvedTrackPiece {
+  trackRotation 0 1 0 1.5708
+  trackTranslation -6 0 -4
+}
+DEF StraightTrackPiece_6 StraightTrackPiece {
+  trackRotation 0 1 0 3.14159
+  trackTranslation -8 0 -2
+}
+DEF CurvedTrackPiece_7 CurvedTrackPiece {
+  trackRotation 0 1 0 3.14159
+  trackTranslation -6 0 -0
+}
+DEF StraightTrackPiece_8 StraightTrackPiece {
+  trackRotation 0 1 0 4.71239
+  trackTranslation -4 0 2
+}
+DEF CurvedTrackPiece_9 CurvedTrackPiece {
+  trackRotation 0 1 0 4.71239
+  trackTranslation -2 0 -0
+}
+DEF CurvedTrackPiece_10 CurvedTrackPiece {
+  trackTransparency 1
+  trackRotation 0 1 0 0
+  trackTranslation -2 0 -0
+}
+DEF Camera Viewpoint {
+  description "Camera_View"
+  position 0 6 1
+  orientation -1 0 0 1.5708
+}

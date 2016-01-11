@@ -1,0 +1,49 @@
+#VRML V2.0 utf8
+PROTO ChicaneTrackPiece [
+    exposedField SFVec3f trackTranslation 0 0 0
+    exposedField SFRotation trackRotation 0 0 0 0
+    exposedField SFVec3f trackScale 1 1 1
+    exposedField SFFloat trackTransparency 0
+]
+{
+EXTERNPROTO ChicaneLine [
+    exposedField SFVec3f cTranslation 
+    exposedField SFVec3f cScale
+    exposedField SFRotation cRotation
+    exposedField SFColor cColor
+    exposedField SFFloat cTransparency
+]
+"chicane_line.wrl#ChicaneLine" 
+
+EXTERNPROTO ChicaneTrack [
+    exposedField SFVec3f cTranslation 
+    exposedField SFVec3f cScale
+    exposedField SFRotation cRotation
+    exposedField SFColor cColor
+    exposedField SFFloat cTransparency
+]
+"chicane_track.wrl#ChicaneTrack" 
+    
+Transform { 
+    translation IS trackTranslation
+	rotation IS trackRotation 
+	scale IS trackScale  
+	children [ 
+		Transform {
+            translation 1.1667 0 2 # align centre to be the same as straight piece
+            children [
+                DEF ChicaneP ChicaneTrack {
+                    cTranslation 0 0 0
+                    cTransparency IS trackTransparency
+                }
+
+                DEF ChicaneL ChicaneLine {
+                    cTranslation  -0.9583 0.0208 0 #shift y axis by 0.25 inches
+                    cColor 0.1 0.1 0.1
+                    cTransparency IS trackTransparency
+                }
+            ]
+        }		
+    ] 	
+}
+}

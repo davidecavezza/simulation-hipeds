@@ -1,0 +1,82 @@
+#VRML V2.0 utf8
+PROTO StraightTrackPiece [
+	exposedField SFVec3f trackTranslation 0 0 0
+	exposedField SFRotation trackRotation 0 0 0 0
+	exposedField SFVec3f trackScale 1 1 1
+    exposedField SFFloat trackTransparency 0
+	]
+{
+Transform {
+	translation IS trackTranslation
+	rotation IS trackRotation
+	scale IS trackScale 
+	children [
+DEF StraightTrackPiece Transform { 
+	translation 0 0 0 
+	center 0 0 0 
+	rotation 0 0 0 0 
+	scale 1 1 1 
+	children [ 
+		DEF StraightPiece Transform { 
+			translation 0 0.0104166666666667 0 
+			center 0 0 0 
+			rotation 0 0 0 0 
+			scale 1 1 1 
+			children [ 
+				Shape { 
+					appearance Appearance { 
+						material Material { 
+							ambientIntensity 0 
+							diffuseColor 0 0 0 
+							emissiveColor 0.9 0.9 0.9 
+							shininess 0 
+							specularColor 0 0 0 
+							transparency IS trackTransparency 
+						} 
+						texture NULL 
+						textureTransform NULL 
+					} 
+					geometry Box { 
+						size 2 0.0208333333333333 4 
+					} 
+					
+				} 
+				
+			] 
+			
+		} 
+		DEF StraightLine Transform { 
+			translation 0 0.03125 0 
+			center 0 0 0 
+			rotation 0 0 0 0 
+			scale 1 1 1 
+			children [ 
+				Shape { 
+					appearance Appearance { 
+						material Material { 
+							ambientIntensity 0 
+							diffuseColor 0 0 0 
+							emissiveColor 0.1 0.1 0.1 
+							shininess 0 
+							specularColor 0 0 0 
+							transparency IS trackTransparency 
+						} 
+						texture NULL 
+						textureTransform NULL 
+					} 
+					geometry Box { 
+						size 0.0833333333333333 0.0104166666666667 4 
+					} 
+					
+				} 
+				
+			] 
+			
+		} 
+		
+	] 
+	
+}
+	]
+}
+}

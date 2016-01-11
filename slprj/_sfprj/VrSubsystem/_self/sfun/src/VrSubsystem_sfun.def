@@ -1,0 +1,3 @@
+LIBRARY VrSubsystem_sfun.mexw64
+EXPORTS
+mexFunction

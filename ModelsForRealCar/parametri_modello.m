@@ -1,0 +1,10 @@
+%esposizione = 10^-250;
+esposizione = 200;
+vel_mot = 0.5;
+differenziale = 0.01*vel_mot;
+rallenta = 1/20;
+% PID VALUES
+P = 0.32;
+I = 0.001;
+D = 0.01;
+N = 100;
